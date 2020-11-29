@@ -28,7 +28,14 @@ namespace IndvDesktop
                 MaterialSkin.Primary.Indigo700,
                 MaterialSkin.Primary.Indigo100,
                 MaterialSkin.Accent.Pink200,
-                MaterialSkin.TextShade.WHITE);
+                MaterialSkin.TextShade.WHITE
+                );
+
+            cmxA1.DataSource = Parameters.arrayA1;
+            cmxA2.DataSource = Parameters.arrayA2;
+            cmxA3.DataSource = Parameters.arrayA3;
+
+            
 
             //int x = SystemInformation.WorkingArea.Width;
             //int y = SystemInformation.WorkingArea.Height;
@@ -68,6 +75,21 @@ namespace IndvDesktop
                     }
                 }
             }
+        }
+
+        private void cmxA1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Parameters.results[0] = cmxA1.SelectedIndex;
+        }
+
+        private void cmxA2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Parameters.results[1] = cmxA2.SelectedIndex;
+        }
+
+        private void cmxA3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Parameters.results[2] = cmxA3.SelectedIndex;
         }
 
         //    private void btnOpenGoalWind_Click(object sender, EventArgs e)
