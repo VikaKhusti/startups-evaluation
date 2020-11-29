@@ -12,6 +12,7 @@ namespace IndvDesktop
 {
     public partial class InputForm : Form
     {
+        public static bool OK = false;
         public static string[] arrayA1 = new string[] 
         {
             "є потреба в перспективній концепції",
@@ -36,12 +37,38 @@ namespace IndvDesktop
             "вище середнього",
             "високі"
         };
+        public static int[] results = new int[3];
         public InputForm()
         {
             InitializeComponent();
             cmxA1.DataSource = arrayA1;
             cmxA2.DataSource = arrayA2;
             cmxA3.DataSource = arrayA3;
+        }
+
+        private void cmxA1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            results[0] = cmxA1.SelectedIndex;
+        }
+
+        private void cmxA2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            results[1] = cmxA2.SelectedIndex;
+        }
+
+        private void cmxA3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            results[2] = cmxA3.SelectedIndex;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            //ToDo
+            //try-catch for empty fields
+            
+            Form1 form = new Form1();
+            form.ShowDialog();
+            
         }
     }
 }
