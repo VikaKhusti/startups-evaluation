@@ -46,6 +46,5 @@ namespace IndvDesktop
 
         public static int[] results = new int[3];
 
-        
     }
 }

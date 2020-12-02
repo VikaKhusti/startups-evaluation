@@ -35,46 +35,18 @@ namespace IndvDesktop
             cmxA2.DataSource = Parameters.arrayA2;
             cmxA3.DataSource = Parameters.arrayA3;
 
-            
-
-            //int x = SystemInformation.WorkingArea.Width;
-            //int y = SystemInformation.WorkingArea.Height;
-            //Form1 form = new Form1();
-            //form.WindowState = FormWindowState.Normal;
-            //form.Location = new Point(0, 0);
-            //form.Size = new Size(x, y);
         }
-
+        public static DataTable dt;
         private void cmbSheet_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataTable dt = tableCollection[cmbSheet.SelectedItem.ToString()];
+            dt = ExcelHelper.tableCollection[cmbSheet.SelectedItem.ToString()];
             dataGridView1.DataSource = dt;
         }
 
-        DataTableCollection tableCollection;
+       
         private void btnBrowse_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = ("*.xls|*xlsx") })
-            {
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    txtFileName.Text = openFileDialog.FileName;
-                    using (var stream = File.Open(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
-                    {
-                        using (IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream))
-                        {
-                            DataSet data = reader.AsDataSet(new ExcelDataSetConfiguration()
-                            {
-                                ConfigureDataTable = (_) => new ExcelDataTableConfiguration() { UseHeaderRow = true }
-                            });
-                            tableCollection = data.Tables;
-                            cmbSheet.Items.Clear();
-                            foreach (DataTable table in tableCollection)
-                                cmbSheet.Items.Add(table.TableName);
-                        }
-                    }
-                }
-            }
+            ExcelHelper.OpenExcelFile(txtFileName, cmbSheet);            
         }
 
         private void cmxA1_SelectedIndexChanged(object sender, EventArgs e)
@@ -92,10 +64,10 @@ namespace IndvDesktop
             Parameters.results[2] = cmxA3.SelectedIndex;
         }
 
-        //    private void btnOpenGoalWind_Click(object sender, EventArgs e)
-        //    {
-        //        InputForm form = new InputForm();
-        //        form.ShowDialog();
-        //    }
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            Form2 form = new Form2();
+            form.ShowDialog();
+        }
     }
 }
