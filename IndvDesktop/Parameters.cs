@@ -8,7 +8,7 @@ namespace IndvDesktop
 {
     class Parameters
     {
-        Dictionary<int, double> values = new Dictionary<int, double> 
+        public static Dictionary<int, double> values = new Dictionary<int, double> 
         {
             {0, 0.2 },
             {1, 0.4 },
