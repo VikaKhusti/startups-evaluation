@@ -45,6 +45,13 @@ namespace IndvDesktop
         };
 
         public static int[] results = new int[3];
-
+        public static int[] coefficients = new int[3];
+        public static double[] z = new double[5];
+        
+        public static double GetWi(int i)
+        {
+            double wi = Convert.ToDouble(coefficients[i]) / Convert.ToDouble(coefficients[0] + coefficients[1] + coefficients[2]);
+            return wi;
+        }
     }
 }
