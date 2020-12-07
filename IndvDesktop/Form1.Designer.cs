@@ -46,34 +46,30 @@ namespace IndvDesktop
             this.cmbSheet = new MaterialSkin.Controls.MaterialComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Налаштування = new System.Windows.Forms.TabPage();
-            this.cb3 = new MaterialSkin.Controls.MaterialComboBox();
-            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
-            this.cb2 = new MaterialSkin.Controls.MaterialComboBox();
-            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
-            this.cb1 = new MaterialSkin.Controls.MaterialComboBox();
-            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.materialContextMenuStrip1 = new MaterialSkin.Controls.MaterialContextMenuStrip();
-            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.materialTabControl1.SuspendLayout();
             this.Головна.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.Налаштування.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // materialTabControl1
             // 
             this.materialTabControl1.Controls.Add(this.Головна);
+            this.materialTabControl1.Controls.Add(this.tabPage1);
             this.materialTabControl1.Controls.Add(this.Налаштування);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialTabControl1.ImageList = this.imageList2;
+            this.materialTabControl1.ImageList = this.imageList1;
             this.materialTabControl1.Location = new System.Drawing.Point(0, 0);
             this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabControl1.Multiline = true;
             this.materialTabControl1.Name = "materialTabControl1";
             this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(732, 385);
+            this.materialTabControl1.Size = new System.Drawing.Size(1254, 658);
             this.materialTabControl1.TabIndex = 0;
             // 
             // Головна
@@ -92,10 +88,10 @@ namespace IndvDesktop
             this.Головна.Controls.Add(this.cmbSheet);
             this.Головна.Controls.Add(this.dataGridView1);
             this.Головна.ImageKey = "home32.png";
-            this.Головна.Location = new System.Drawing.Point(4, 23);
+            this.Головна.Location = new System.Drawing.Point(4, 39);
             this.Головна.Name = "Головна";
             this.Головна.Padding = new System.Windows.Forms.Padding(3);
-            this.Головна.Size = new System.Drawing.Size(724, 358);
+            this.Головна.Size = new System.Drawing.Size(1246, 615);
             this.Головна.TabIndex = 0;
             this.Головна.Text = "Головна";
             // 
@@ -293,165 +289,19 @@ namespace IndvDesktop
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(9, 19);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.Size = new System.Drawing.Size(644, 133);
             this.dataGridView1.TabIndex = 0;
             // 
             // Налаштування
             // 
             this.Налаштування.BackColor = System.Drawing.Color.White;
-            this.Налаштування.Controls.Add(this.cb3);
-            this.Налаштування.Controls.Add(this.materialLabel7);
-            this.Налаштування.Controls.Add(this.cb2);
-            this.Налаштування.Controls.Add(this.materialLabel6);
-            this.Налаштування.Controls.Add(this.cb1);
-            this.Налаштування.Controls.Add(this.materialLabel5);
             this.Налаштування.ImageKey = "settings32.png";
-            this.Налаштування.Location = new System.Drawing.Point(4, 23);
+            this.Налаштування.Location = new System.Drawing.Point(4, 39);
             this.Налаштування.Name = "Налаштування";
             this.Налаштування.Padding = new System.Windows.Forms.Padding(3);
-            this.Налаштування.Size = new System.Drawing.Size(724, 358);
+            this.Налаштування.Size = new System.Drawing.Size(1246, 615);
             this.Налаштування.TabIndex = 1;
             this.Налаштування.Text = "Налаштування";
-            // 
-            // cb3
-            // 
-            this.cb3.AutoResize = false;
-            this.cb3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cb3.Depth = 0;
-            this.cb3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cb3.DropDownHeight = 174;
-            this.cb3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb3.DropDownWidth = 121;
-            this.cb3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.cb3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cb3.FormattingEnabled = true;
-            this.cb3.IntegralHeight = false;
-            this.cb3.ItemHeight = 43;
-            this.cb3.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
-            this.cb3.Location = new System.Drawing.Point(341, 13);
-            this.cb3.Margin = new System.Windows.Forms.Padding(2);
-            this.cb3.MaxDropDownItems = 4;
-            this.cb3.MouseState = MaterialSkin.MouseState.OUT;
-            this.cb3.Name = "cb3";
-            this.cb3.Size = new System.Drawing.Size(62, 49);
-            this.cb3.TabIndex = 6;
-            this.cb3.SelectedIndexChanged += new System.EventHandler(this.cb3_SelectedIndexChanged);
-            // 
-            // materialLabel7
-            // 
-            this.materialLabel7.AutoSize = true;
-            this.materialLabel7.Depth = 0;
-            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel7.Location = new System.Drawing.Point(332, 25);
-            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel7.Name = "materialLabel7";
-            this.materialLabel7.Size = new System.Drawing.Size(4, 19);
-            this.materialLabel7.TabIndex = 5;
-            this.materialLabel7.Text = ";";
-            // 
-            // cb2
-            // 
-            this.cb2.AutoResize = false;
-            this.cb2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cb2.Depth = 0;
-            this.cb2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cb2.DropDownHeight = 174;
-            this.cb2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb2.DropDownWidth = 121;
-            this.cb2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.cb2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cb2.FormattingEnabled = true;
-            this.cb2.IntegralHeight = false;
-            this.cb2.ItemHeight = 43;
-            this.cb2.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
-            this.cb2.Location = new System.Drawing.Point(260, 14);
-            this.cb2.Margin = new System.Windows.Forms.Padding(2);
-            this.cb2.MaxDropDownItems = 4;
-            this.cb2.MouseState = MaterialSkin.MouseState.OUT;
-            this.cb2.Name = "cb2";
-            this.cb2.Size = new System.Drawing.Size(62, 49);
-            this.cb2.TabIndex = 4;
-            this.cb2.SelectedIndexChanged += new System.EventHandler(this.cb2_SelectedIndexChanged);
-            // 
-            // materialLabel6
-            // 
-            this.materialLabel6.AutoSize = true;
-            this.materialLabel6.Depth = 0;
-            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel6.Location = new System.Drawing.Point(251, 25);
-            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel6.Name = "materialLabel6";
-            this.materialLabel6.Size = new System.Drawing.Size(4, 19);
-            this.materialLabel6.TabIndex = 3;
-            this.materialLabel6.Text = ";";
-            // 
-            // cb1
-            // 
-            this.cb1.AutoResize = false;
-            this.cb1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cb1.Depth = 0;
-            this.cb1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cb1.DropDownHeight = 174;
-            this.cb1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb1.DropDownWidth = 121;
-            this.cb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.cb1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cb1.FormattingEnabled = true;
-            this.cb1.IntegralHeight = false;
-            this.cb1.ItemHeight = 43;
-            this.cb1.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
-            this.cb1.Location = new System.Drawing.Point(174, 14);
-            this.cb1.Margin = new System.Windows.Forms.Padding(2);
-            this.cb1.MaxDropDownItems = 4;
-            this.cb1.MouseState = MaterialSkin.MouseState.OUT;
-            this.cb1.Name = "cb1";
-            this.cb1.Size = new System.Drawing.Size(72, 49);
-            this.cb1.TabIndex = 2;
-            this.cb1.SelectedIndexChanged += new System.EventHandler(this.cb1_SelectedIndexChanged);
-            // 
-            // materialLabel5
-            // 
-            this.materialLabel5.AutoSize = true;
-            this.materialLabel5.Depth = 0;
-            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel5.Location = new System.Drawing.Point(19, 28);
-            this.materialLabel5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(142, 19);
-            this.materialLabel5.TabIndex = 0;
-            this.materialLabel5.Text = "Вагові коефіціенти";
             // 
             // imageList1
             // 
@@ -461,26 +311,30 @@ namespace IndvDesktop
             this.imageList1.Images.SetKeyName(1, "settings32.png");
             this.imageList1.Images.SetKeyName(2, "graph32.png");
             // 
-            // materialContextMenuStrip1
+            // tabPage1
             // 
-            this.materialContextMenuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.materialContextMenuStrip1.Depth = 0;
-            this.materialContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.materialContextMenuStrip1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialContextMenuStrip1.Name = "materialContextMenuStrip1";
-            this.materialContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.tabPage1.Controls.Add(this.dataGridView2);
+            this.tabPage1.ImageKey = "graph32.png";
+            this.tabPage1.Location = new System.Drawing.Point(4, 39);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(1246, 615);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Обчислення";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // imageList2
+            // dataGridView2
             // 
-            this.imageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(8, 13);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(644, 133);
+            this.dataGridView2.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 385);
+            this.ClientSize = new System.Drawing.Size(1254, 658);
             this.Controls.Add(this.materialTabControl1);
             this.DrawerShowIconsWhenHidden = true;
             this.DrawerTabControl = this.materialTabControl1;
@@ -491,8 +345,8 @@ namespace IndvDesktop
             this.Головна.ResumeLayout(false);
             this.Головна.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.Налаштування.ResumeLayout(false);
-            this.Налаштування.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -515,14 +369,8 @@ namespace IndvDesktop
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialButton materialButton1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel5;
-        private MaterialSkin.Controls.MaterialComboBox cb1;
-        private MaterialSkin.Controls.MaterialContextMenuStrip materialContextMenuStrip1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel6;
-        private MaterialSkin.Controls.MaterialComboBox cb3;
-        private MaterialSkin.Controls.MaterialLabel materialLabel7;
-        private MaterialSkin.Controls.MaterialComboBox cb2;
-        private System.Windows.Forms.ImageList imageList2;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
 

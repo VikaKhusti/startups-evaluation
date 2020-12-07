@@ -30,21 +30,17 @@ namespace IndvDesktop
                 MaterialSkin.TextShade.WHITE
                 );
             InitializeDataGridView();
-            GetResult();
+
         }
 
         double[] ui = new double[3];
        // DataGridView dgv;
         DataTable dtI = Form1.dt;
         DataTable dtII = new DataTable();
-        DataTable dtIII = new DataTable();
-
         private void InitializeDataGridView()
         {
             dtII = dtI.Copy();
-            dtIII = dtII.Copy();
             dataGridView1.DataSource = dtII;
-            dataGridView2.DataSource = dtIII;
 
             for (int i = 0; i < 3; i++)
             {
@@ -57,7 +53,6 @@ namespace IndvDesktop
                 {
                     dataGridView1[j, i].Value = Math.Abs(ui[i] - Convert.ToDouble(dtI.Rows[i][j]))
                         / Math.Max(ui[i] - GetMinMax(dtI,i).Item1, GetMinMax(dtI, i).Item2 - ui[i]);
-                    dataGridView2[j, i].Value = 1 - Convert.ToDouble(dtII.Rows[i][j]);
                 }
             }
 
@@ -72,19 +67,6 @@ namespace IndvDesktop
             }
             double min = Convert.ToDouble(cells.Min()); double max = Convert.ToDouble(cells.Max());
             return Tuple.Create(min, max);
-        }
-
-        private void GetResult()
-        {
-            for (int i = 0; i < 5; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    Parameters.z[i] += Parameters.GetWi(j) * Convert.ToDouble(dtIII.Rows[++j][i]);
-                }
-                
-            }
-            resultLabel.Text = Parameters.z[0].ToString();
         }
     }
 }
