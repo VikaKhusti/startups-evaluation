@@ -35,6 +35,9 @@ namespace IndvDesktop
             cmxA2.DataSource = Parameters.arrayA2;
             cmxA3.DataSource = Parameters.arrayA3;
 
+            cb1.SelectedIndex = 9;
+            cb2.SelectedIndex = 7;
+            cb3.SelectedIndex = 8;
         }
         public static DataTable dt;
         private void cmbSheet_SelectedIndexChanged(object sender, EventArgs e)
@@ -43,10 +46,10 @@ namespace IndvDesktop
             dataGridView1.DataSource = dt;
         }
 
-       
+
         private void btnBrowse_Click(object sender, EventArgs e)
         {
-            ExcelHelper.OpenExcelFile(txtFileName, cmbSheet);            
+            ExcelHelper.OpenExcelFile(txtFileName, cmbSheet);
         }
 
         private void cmxA1_SelectedIndexChanged(object sender, EventArgs e)
@@ -66,9 +69,39 @@ namespace IndvDesktop
 
         private void materialButton1_Click(object sender, EventArgs e)
         {
-            //ToDo try-catch
+            //try
+            //{
+            //    Form2 form = new Form2();
+            //    form.ShowDialog();
+            //}
+            //catch
+            //{
+            //    MessageBox.Show(
+            //        "Не вірно внесені дані",
+            //        "Помилка",
+            //        MessageBoxButtons.OK,
+            //        MessageBoxIcon.Error
+            //        );
+            //}
             Form2 form = new Form2();
-            form.ShowDialog();
+                form.ShowDialog();
         }
+
+        private void cb1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Parameters.coefficients[0] = cb1.SelectedIndex + 1;
+        }
+
+        private void cb2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Parameters.coefficients[1] = cb2.SelectedIndex + 1;
+        }
+
+        private void cb3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Parameters.coefficients[2] = cb3.SelectedIndex + 1;
+        }
+
+
     }
 }
