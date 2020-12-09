@@ -69,22 +69,20 @@ namespace IndvDesktop
 
         private void materialButton1_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    Form2 form = new Form2();
-            //    form.ShowDialog();
-            //}
-            //catch
-            //{
-            //    MessageBox.Show(
-            //        "Не вірно внесені дані",
-            //        "Помилка",
-            //        MessageBoxButtons.OK,
-            //        MessageBoxIcon.Error
-            //        );
-            //}
-            Form2 form = new Form2();
+            try
+            {
+                Form2 form = new Form2();
                 form.ShowDialog();
+            }
+            catch
+            {
+                MessageBox.Show(
+                    "Не вірно внесені дані",
+                    "Помилка",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                    );
+            }
         }
 
         private void cb1_SelectedIndexChanged(object sender, EventArgs e)

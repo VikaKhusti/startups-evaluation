@@ -44,6 +44,15 @@ namespace IndvDesktop
             "високі"
         };
 
+        public static string[] labels = new string[]
+        {
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5"
+        };
+
         public static int[] results = new int[3];
         public static int[] coefficients = new int[3];
         public static double[] z = new double[5];
