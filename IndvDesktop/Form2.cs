@@ -76,15 +76,21 @@ namespace IndvDesktop
 
         private void GetResult()
         {
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 3; i++)
             {
-                for (int j = 0; j < 3; j++)
+                for (int j = 0; j < 5; j++)
                 {
-                   // Parameters.z[i] += Parameters.GetWi(j) * Convert.ToDouble(dtIII.Rows[++j][i]);
+                    Parameters.z[j] += Parameters.GetWi(i) * Convert.ToDouble(dtIII.Rows[i][j+1]);
                 }
-
             }
-           // resultLabel.Text = Parameters.z[0].ToString();
+
+            rankingSeriesLabel.Text = "{ p1 = " 
+                + Math.Round(Parameters.z[0],3).ToString() + ", p2 = "
+                + Math.Round(Parameters.z[1], 3).ToString() + ", p3 = "
+                + Math.Round(Parameters.z[2], 3).ToString() + ", p4 = "
+                + Math.Round(Parameters.z[3], 3).ToString() + ", p5 = "
+                + Math.Round(Parameters.z[4], 3).ToString() + " }";
+                
         }
     }
 }
