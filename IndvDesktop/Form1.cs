@@ -38,6 +38,8 @@ namespace IndvDesktop
             cb1.SelectedIndex = 9;
             cb2.SelectedIndex = 7;
             cb3.SelectedIndex = 8;
+
+            this.Text = "Оцінювання стартап проектів за цілями інвесторів";
         }
         public static DataTable dt;
         private void cmbSheet_SelectedIndexChanged(object sender, EventArgs e)

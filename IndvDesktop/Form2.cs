@@ -32,6 +32,8 @@ namespace IndvDesktop
                 MaterialSkin.Accent.Pink200,
                 MaterialSkin.TextShade.WHITE
                 );
+
+            this.Text = "Результати оцінювання";
             InitializeDataGridView();
             GetResult();
             FillChart();
@@ -96,8 +98,8 @@ namespace IndvDesktop
                 + Math.Round(Parameters.z[4], 3).ToString() + " }";
 
             double max = Parameters.z.Max();
-            int index = Array.IndexOf(Parameters.z, max);
-            resLabel.Text = "Hайкращий стартап проект враховуючи цілі інвесторів – p" + index+1 + " з найбільшою оцінкою " + Math.Round(max, 3);
+            int index = Array.IndexOf(Parameters.z, max) + 1;
+            resLabel.Text = "Hайкращий стартап проект враховуючи цілі інвесторів – p" + index + " з найбільшою оцінкою " + Math.Round(max, 3);
 
         }      
                 

@@ -8,6 +8,7 @@ namespace IndvDesktop
 {
     class Parameters
     {
+        public int PCount { get; set; }
         public static Dictionary<int, double> values = new Dictionary<int, double>
         {
             {0, 0.2 },
